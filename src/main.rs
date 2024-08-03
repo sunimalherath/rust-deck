@@ -6,6 +6,7 @@ struct Deck {
 // adding inherent implementation
 impl Deck {
     // fn new() -> Deck
+    // new() is a an Associated function - tied to the struct definition.
     fn new() -> Self {
         let suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
         let values = [
@@ -28,6 +29,8 @@ impl Deck {
 
         return deck;
     }
+
+    // fn shuffle(&self) - this is a method - operates on a specific instance of struct.
 }
 fn main() {
     let deck = Deck::new();
