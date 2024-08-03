@@ -28,7 +28,7 @@ impl Deck {
 
         // return  Deck { cards }; // classic way to return
 
-        Deck { cards} // return the Deck
+        Deck { cards} // implicit return of the Deck
     }
 
     // fn shuffle(&self) - this is a method - operates on a specific instance of struct.
