@@ -25,9 +25,10 @@ impl Deck {
 
         // let deck = Deck { cards: Vec::new()}; // another way.
         // let deck = Deck { cards: cards}; // This can be simplified as follows
-        let deck = Deck { cards };
 
-        return deck;
+        // return  Deck { cards }; // classic way to return
+
+        Deck { cards} // return the Deck
     }
 
     // fn shuffle(&self) - this is a method - operates on a specific instance of struct.
