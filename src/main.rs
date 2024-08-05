@@ -1,3 +1,5 @@
+use rand::{thread_rng, seq::SliceRandom};
+
 #[derive(Debug)] // derive attribute for Deck to implement Debug trait.
 struct Deck {
     cards: Vec<String>,
@@ -32,9 +34,15 @@ impl Deck {
     }
 
     // fn shuffle(&self) - this is a method - operates on a specific instance of struct.
+    fn shuffle(&mut self) {
+        let mut rng = thread_rng(); // random number generator
+        self.cards.shuffle(&mut rng);
+    }
 }
 fn main() {
-    let deck = Deck::new();
+    let mut deck = Deck::new();
+
+    deck.shuffle();
 
     println!("Here's your deck:\n {:#?}", deck);
 }
